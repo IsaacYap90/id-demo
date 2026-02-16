@@ -26,7 +26,7 @@ const questions = [
   {
     q: "Budget range?",
     options: ["Under $30K", "$30-50K", "$50-80K", "$80-120K", "$120K+"],
-    icons: ["$", "$$", "$$$", "$$$$", "$$$$$"],
+    icons: ["💰", "💰", "💎", "💎", "👑"],
   },
 ];
 
@@ -91,7 +91,7 @@ export default function StyleQuiz() {
                   transition={{ duration: 0.3 }}
                 >
                   <h3 className="text-xl sm:text-2xl text-cream mb-6">{questions[step].q}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className={`grid gap-3 ${questions[step].options.length === 5 ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>
                     {questions[step].options.map((option, i) => (
                       <button
                         key={option}
