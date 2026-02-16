@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4b97e;
+  --color-gold-dark: #b8944f;
+  --color-cream: #f5f0e8;
+  --color-dark: #1a1a1a;
+  --color-dark-lighter: #252525;
+  --color-dark-card: #2a2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #f5f0e8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 4px;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #c9a96e 0%, #f5f0e8 50%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero background pattern */
+.hero-bg {
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(201, 169, 110, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(201, 169, 110, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, #111111 0%, #1a1a1a 50%, #111111 100%);
+}
+
+/* Subtle grid pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(201, 169, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 110, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gold border glow */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.15), 0 0 40px rgba(201, 169, 110, 0.05);
+}
+
+/* Portfolio card gradients */
+.portfolio-1 { background: linear-gradient(135deg, #2a2a2a 0%, #3a3020 100%); }
+.portfolio-2 { background: linear-gradient(135deg, #252530 0%, #2a2a35 100%); }
+.portfolio-3 { background: linear-gradient(135deg, #2a2520 0%, #352a25 100%); }
+.portfolio-4 { background: linear-gradient(135deg, #202a25 0%, #253530 100%); }
+.portfolio-5 { background: linear-gradient(135deg, #2a2025 0%, #352530 100%); }
+.portfolio-6 { background: linear-gradient(135deg, #25252a 0%, #303035 100%); }
+
+/* Slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c9a96e;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(201, 169, 110, 0.3);
+}
+
+/* Chat animation */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.chat-message {
+  animation: slideUp 0.3s ease-out;
+}
